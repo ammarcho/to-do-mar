@@ -1,0 +1,26 @@
+.sortBy-class select{
+    width: 14rem;
+    height: 1.8rem;
+    border: none;
+    border-radius: 2rem;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(151,66,255,0.8), transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(177,113,255,0.5), transparent 65%),
+        linear-gradient(
+            160deg,
+            #1a1a1a,
+            #0d0d0d
+        );
+    background-color: black;
+    padding-left: 1rem;
+}
+
+@media screen and (max-width: 768px){
+    .sortBy-class select{
+        width: 8rem;
+        height: 1rem;
+        font-size: 0.6rem;
+        padding-left: 0.5rem;
+    }
+}
+

@@ -1,0 +1,120 @@
+.addSearch-class{
+    min-height: 4rem;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 4rem;
+
+}
+
+.addClear-class{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.add-class{
+    height: 3rem;
+    width: 3rem;
+
+    font-size: 2rem;
+    color: white;
+
+    background-color: rgb(151,66, 255);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, color 0.2s ease-out, border 0.15s ease;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+.add-class:active {
+  transform: scale(0.94);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.add-class:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color: rgb(151,66, 255);
+    border: 1px solid rgb(151,66, 255);
+}
+
+
+.clear-class{
+    height: 3rem;
+    width: 3rem;
+    background-color: black;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease,color 0.2s ease-out;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+.clear-class:active {
+  transform: scale(0.94);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.clear-class:hover{
+    transform: scale(1.1);
+    background-color: red;
+}
+
+.search-class{
+    height: 2.4rem;
+    width: 16rem;
+
+    border:none;
+    outline: none;
+    border-radius: 0.5rem;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(151,66,255,0.8), transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(177,113,255,0.5), transparent 65%),
+        linear-gradient(
+            160deg,
+            #1a1a1a,
+            #0d0d0d
+        );
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    padding-left: 1rem;
+}
+
+.search-class::placeholder{
+    color:white
+}
+
+.search-class:focus{
+    border:1px solid white
+}
+
+
+@media screen and (max-width: 768px){
+    .addSearch-class{
+        min-height: 2.5rem;
+        height: auto ; /* 10vh */
+        padding: 0.5rem 1rem 0rem 1rem;
+    }
+    .addClear-class{
+        column-gap: 0.5rem;
+    }
+    .add-class{
+        height: 2rem;
+        width: 2rem;
+        font-size: 1.2rem;}
+    .clear-class {
+        height: 2rem;
+        width: 2rem;
+
+    }
+    .clear-class .material-symbols-outlined{
+        font-size: 1rem;
+    }
+
+    .search-class{
+        height: 2rem;
+        width: 10rem;
+        font-size: 0.7rem;
+    }
+    
+}

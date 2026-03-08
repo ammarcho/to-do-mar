@@ -1,0 +1,430 @@
+.wrapperListToDo-class{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.wrapperListToDo-class::-webkit-scrollbar{
+    width: 8px;
+}
+
+.wrapperListToDo-class::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0);
+    border-radius: 99px;
+}
+
+.wrapperListToDo-class::-webkit-scrollbar-thumb{
+    background-color: rgb(151,66, 255);
+    border-radius: 99px;
+}
+
+.allListToDo-class{
+    width: 100%;
+    max-width: 110rem; 
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: clamp(1rem, 1.5vw, 2rem); 
+
+    padding: 1rem;
+
+}
+
+
+.kotakToDo-class{
+    height: clamp(14rem, 22vh, 20rem);
+
+
+    background:
+        radial-gradient(circle at 30% 20%, rgba(151,66,255,0.8), transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(177,113,255,0.5), transparent 65%),
+        linear-gradient(
+            160deg,
+            #1a1a1a,
+            #0d0d0d
+        );
+    cursor: pointer;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: space-between;
+
+    padding: 1rem;
+
+    position: relative;
+    transition: transform 0.4s ease;
+
+}
+.kotakToDo-class::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.3s ease, backdrop-filter 0.35s ease;
+  pointer-events: none;
+}
+
+
+
+/* Aktif saat hover */
+
+
+h3,h2,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+.kontenToDo-class{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: space-between;
+}
+
+.bagianBawahKotak-class{
+    padding-bottom: 0.5rem;
+    overflow-y: hidden;
+    flex: 1;
+}
+.bagianBawahKotak-class::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3rem;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0, 0, 0, 0.411)
+    );
+    backdrop-filter: blur(0.5px);
+    pointer-events: none;
+}
+
+.bagianBawahKotak-class::-webkit-scrollbar{
+    height: 6px;
+}
+
+.bagianBawahKotak-class::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0);
+    border-radius: 99px;
+}
+
+.bagianBawahKotak-class::-webkit-scrollbar-thumb{
+    background-color: rgb(116, 116, 116);
+    border-radius: 99px;
+}
+
+.titleToDo-class{
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.isiToDo-class{
+    font-size: 0.8rem;
+    text-align: justify;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+    white-space: pre-wrap;
+    /* ❗ Tambahan untuk mencegah overflow */
+    word-wrap: break-word;       /* Bisa juga pakai word-break */
+    word-break: break-word;      /* Memaksa kata panjang terpotong */
+    overflow-wrap: break-word; 
+}
+
+.deleteKotak-class{
+    display: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    background-color: white;
+    color: rgb(0, 0, 0);
+
+    z-index: 9999;
+
+    border: none;
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+
+
+.kontenToDo-class{
+    width: 100%;
+    height: 100%;
+}
+
+
+.editCatatan-class{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    z-index: 99999;
+    cursor: pointer;
+    display: none;
+    top: 0.5rem;
+    left: 0.5rem;
+
+    transition: background-color 0.2s ease;
+}
+
+.editCatatan-class .material-symbols-outlined {
+    color: rgb(0, 0, 0);
+}
+
+
+
+.logoZoom {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: none;
+  border: none;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 99;
+}
+
+.logoZoom .material-symbols-outlined{
+    font-size: 3rem;
+    transition:
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+}
+
+
+
+.menuAction-class{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.openFitur-class{
+    display: none;
+}
+.deleteKotakFitur-class{
+    display: none;
+}
+
+@media (hover: none) and (pointer: coarse){
+    .openFitur-class{
+        position: absolute;
+        background:none;
+        border: none;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        z-index: 999;
+        cursor: pointer;
+        display: block;
+        top: 0.2rem;
+        right: 0.2rem;
+        color: rgb(255, 255, 255);
+    }
+
+    .openFitur-class .material-symbols-outlined{
+        font-size: 1rem;
+    }
+
+    .deleteKotak-class,.editCatatan-class{
+        display: none;
+    }
+
+    .fitur-class{
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        pointer-events: none;
+    }
+
+    .fitur{
+        position: absolute;
+        top: 0rem;
+        right: 0rem;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        padding: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        z-index: 999;
+        cursor: pointer;
+        display: block;
+        opacity: 0;
+
+    }
+    .editCatatanFitur-class,.deleteKotakFitur-class{
+        opacity: 0;
+        transform: translateY(0) scale(0.6);
+        pointer-events: none;
+
+        transition:
+          transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.25s ease;
+    }
+
+    .fitur .material-symbols-outlined{
+        color: black;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+
+    .fitur-class.open .editCatatanFitur-class{
+        transform: translateY(2.5rem) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .fitur-class.open .deleteKotakFitur-class{
+        transform: translateY(5rem) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    
+
+}
+
+
+@media (hover: hover) and (pointer: fine){
+    .fitur-class{
+        display: none;
+    }
+    .kotakToDo-class:hover::after {
+        opacity: 1;
+    }
+
+    .kotakToDo-class:hover{
+        transform: translateY(-4%);
+        box-shadow:
+          0 4px 6px rgba(0, 0, 0, 0.3),
+          0 10px 25px rgba(0,0,0,0.2);
+    }
+    .kotakToDo-class:hover .deleteKotak-class,.kotakToDo-class:hover .editCatatan-class{
+    display: block;
+    }
+
+    .deleteKotak-class:hover{
+        background-color: red;
+        color:white;
+    }
+    .logoZoom:hover {
+      transform: scale(1.25);
+    }
+
+    .kotakToDo-class:hover .logoZoom{
+        pointer-events: auto;
+        opacity: 1;
+        cursor: pointer;
+    }
+    .kotakToDo-class:has(.editCatatan-class:hover)::after,
+    .kotakToDo-class:has(.deleteKotak-class:hover)::after {
+      backdrop-filter: blur(2px);
+    }
+    .editCatatan-class:hover{
+    background-color: rgb(0, 0, 0);
+    }
+
+    .editCatatan-class:hover .material-symbols-outlined {
+        color: rgb(255, 255, 255);
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .allListToDo-class{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+
+    .allListToDo-class{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .kotakToDo-class{
+        height: auto;
+        min-height: 10rem;
+        max-height: 14rem;
+
+        padding: 0.8rem;
+        row-gap: 0.6rem;
+    }
+
+    .titleToDo-class{
+        font-size: 0.9rem;
+    }
+
+    .isiToDo-class{
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+
+    .deleteKotak-class,
+    .editCatatan-class{
+        width: 2rem;
+        height: 2rem;
+        padding: 0.3rem;
+    }
+
+    .logoZoom .material-symbols-outlined{
+        font-size: 2rem;
+    }
+    .wrapperListToDo-class::-webkit-scrollbar{
+        width: 6px;
+    }
+.kontenToDo-class{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.bagianBawahKotak-class{
+    padding-bottom: 0.5rem;
+    overflow-y: hidden;
+    flex: 1;
+}
+.bagianBawahKotak-class::after{
+    height: 1.5rem;
+    backdrop-filter: blur(0.5px);
+}
+
+.bagianBawahKotak-class::-webkit-scrollbar{
+    height: 6px;
+}
+}

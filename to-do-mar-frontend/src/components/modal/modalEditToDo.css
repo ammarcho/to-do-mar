@@ -1,0 +1,129 @@
+.backgroundModalEditToDo-class{
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.wrapperKontenEdit-class{
+    height: 80vh;
+    width: 40vw;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 4px 6px 10px rgba(0,0,0,0.2);
+
+    padding: 2rem;
+    position: relative;
+}
+
+.kontenEdit-class{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.input-class{
+    height: 2rem;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: 1px solid black;
+    color: black;
+    padding-inline: 0.5rem;
+    overflow: hidden;
+}
+.kontenEdit-class textarea{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    resize: none;
+    background: none;
+    color: black;
+    padding: 0.5rem;
+    overflow-y: auto;
+}
+
+.buttonEnterEditCatatan-class{
+    height: 2.5rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+
+    border: none;
+    background-color: rgb(151,66, 255);
+    cursor: pointer;
+}
+
+.buttonCloseEdit-class{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px){
+    .wrapperKontenEdit-class{
+        height: 80vh;
+        width: 80vw;
+        padding: 1rem;
+    }
+
+    .kontenEdit-class{
+        row-gap: 0.5rem;
+    }
+
+    .input-class{
+        height: 1.5rem;
+        font-size: 0.7rem;
+    }
+
+    .kontenEdit-class textarea{
+        font-size: 0.7rem;
+    }
+    .buttonEnterEditCatatan-class{
+        height: 2rem;
+        font-size: 0.9rem;
+    }
+    .buttonCloseEdit-class{
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .calendar-small {
+  font-size: 0.7rem;
+}
+
+.calendar-small .react-datepicker__day,
+.calendar-small .react-datepicker__day-name {
+  width: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 0.75rem;
+}
+
+.calendar-small .react-datepicker__current-month {
+  font-size: 0.75rem;
+}
+
+.calendar-small .react-datepicker__header {
+  padding: 0.4rem 0;
+}
+
+}

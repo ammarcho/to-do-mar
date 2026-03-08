@@ -1,0 +1,18 @@
+.toDoPage-class{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    position: relative;
+    --x: 50%;
+    --y:50%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .toDoPage-class{
+        row-gap: 2vh;
+    }
+}
+

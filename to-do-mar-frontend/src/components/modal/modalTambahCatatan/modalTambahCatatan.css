@@ -1,0 +1,97 @@
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+.overlayModalTambahCatatan-class{
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+
+}
+
+.kontenModalTambahCatatan-class{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+
+    width: 80vw;
+    height: 80vh;
+
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 4px 6px 10px rgba(0,0,0,0.2);
+    
+}
+
+.wrapperKontenModalTambahCatatan{
+    position: relative;
+}
+
+.buttonCloseModalTambahCatatan-class{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgb(45, 45, 45);
+    color:white;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.titleModalTambahCatatan-class{
+    color: black;
+    padding-bottom: 1rem;
+}
+
+
+
+
+
+.buttonEnterTambahCatatan-class{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: rgb(151,66, 255);
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border: none;
+    cursor: pointer;
+}
+
+.buttonEnterTambahCatatan-class .material-symbols-outlined{
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px){
+    .kontenModalTambahCatatan-class{
+        padding: 1rem;
+    }
+    .titleModalTambahCatatan-class{
+        padding: 0rem 0rem 1rem 0rem;
+        font-size: 1.2rem;
+        border-bottom: 1px solid black;
+    }
+    .buttonEnterTambahCatatan-class{
+        width: 2rem;
+        height: 2rem;
+        right: 0.5rem;
+        bottom: 0.5rem;
+    }
+    .buttonCloseModalTambahCatatan-class{
+        width: 2rem;
+        height: 2rem;
+        right: 0.5rem;
+        top:0.5rem;
+    }
+}
