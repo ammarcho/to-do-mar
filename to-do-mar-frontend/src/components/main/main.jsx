@@ -3,7 +3,7 @@ import { AddSearch } from "./addSearch"
 import "./main.css"
 import { MainToDo } from "./mainToDo"
 import { ModalTambahCatatan } from "../modal/modalTambahCatatan/modalTambahCatatan"
-import { ListToDo } from "./listToDO"
+import { ListToDo } from "./listToDo"
 import {SortBy} from "./sortBy"
 import { useAuthFetch } from "../../api/authfetch"
 
